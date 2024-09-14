@@ -16,3 +16,19 @@ int main()
 
     return 0;
 }
+
+#include <iostream>
+#include <new>
+using namespace std;
+
+int main()
+{
+    int a = 1;
+    cout << "valor de a: " << a <<"valor de a:" << a;
+    
+    int b;
+    
+    cin >> a;
+    cout << a;
+    return 0;
+}
