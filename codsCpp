@@ -130,3 +130,37 @@ int main(){
     std::cout << "\nCookie2:" << cookie2.sabor << " custa R$" << cookie2.preco << " forma de:" <<cookie2.formato;
     
 }
+
+#include <iostream>
+#include <ios>
+#include <limits>
+#include <string>
+
+class Coxinha {
+    public:
+        
+        std::string sabor;
+
+
+    Coxinha(std::string saborCoxinha){
+        std::cout << "C sabor\n";
+        sabor = saborCoxinha;
+    }
+};
+int main(){
+    
+    std::string saborUser;
+    
+    std::cout << "Sabor:";
+    getline(std::cin, saborUser );
+    
+    
+    Coxinha coxinha1(saborUser);
+    std::cout << "coxinha sabor:" << coxinha1.sabor << std::endl;
+    
+    //Pessoa pessoa2("Jonas"); //Cria um objeto da classe pessoa com nome
+    //std::cout << "pessoa2:" << pessoa2.nome << "\n";
+
+
+    
+}
