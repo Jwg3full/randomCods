@@ -52,3 +52,33 @@ int main(){
     
     return 0;
 }
+
+#include <iostream>
+#include <ios>
+#include <limits>
+#include <string>
+
+class Cookie {
+    public:
+        float preco;
+        std::string sabor;
+};
+
+int main(){
+    Cookie cookie1;
+    
+    std::cout << "digite o valor do cookie:";
+    std::cin >> cookie1.preco;
+        
+
+    std::cout << "digite sabor do cookie:";
+    
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    
+    getline(std::cin, cookie1.sabor );
+
+
+    
+    std::cout << "\nCookie1:" << cookie1.sabor << " custa R$" << cookie1.preco;
+}
