@@ -164,3 +164,54 @@ int main(){
 
     
 }
+
+#include <iostream>
+
+class eletronico{
+    private:
+        std::string marca;
+    
+    public:
+    
+    std::string getMarca(){
+        return marca;
+    }
+    
+    void setMarca(std::string marca){
+        this -> marca = marca;
+    }
+    protected:
+    
+    void souEletronico(){
+        printf("criado.");
+    }
+};
+
+class celular: public eletronico{
+    private:
+        int polegadas;
+    
+    public:
+    
+    int getPolegadas(){
+        return polegadas;
+    }
+    
+    void setPolegadas(int polegadas){
+        this-> polegadas = polegadas;
+    }
+};
+
+int main()
+{
+    eletronico eletronico1;
+    eletronico1.setMarca("apple");
+    std::cout << "eletronico1:" << eletronico1.getMarca() << std::endl; 
+    
+    celular celular1;
+    celular1.setMarca("Iphone");
+    celular1.setPolegadas(10);
+        std::cout << "celular1:" << celular1.getMarca() << celular1.getPolegadas() <<std::endl; 
+
+    return 0;
+}
