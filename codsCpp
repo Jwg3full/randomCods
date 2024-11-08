@@ -215,3 +215,145 @@ int main()
 
     return 0;
 }
+
+EXERCICIO POO
+
+#include <iostream>
+
+class Data {
+    private:
+    int dia;
+    int mes;
+    int ano;
+    public:
+    // Construtor da classe Data
+    Data() {}
+    // Métodos de acesso
+    int getDia() { return dia; }
+    int getMes() { return mes; }
+    int getAno() { return ano; }
+    void setDia(int dia){this->dia = dia;}
+    void setMes(int mes){this->mes = mes;}
+    void setAno(int ano){this->ano = ano;}
+    // Método para exibir a data no formato dd/mm/aaaa
+    void exibirData() {
+    std::cout << dia << "/" << mes << "/" << ano;
+    };
+};
+class Pessoa{
+    private:
+    int matricula;
+    std::string nome;
+    std::string email;
+    
+    public:
+    int getMatricula(){
+        return matricula;
+    }
+    
+    void setMatricula(int matricula){
+        this -> matricula = matricula;
+    }
+    
+    std::string getNome(){
+        return nome;
+    }
+    
+    void setNome(std::string nome){
+        this -> nome = nome;
+    }
+    
+    std::string getEmail(){
+        return email;
+    }
+    
+    void setEmail(std::string email){
+        this -> email = email;
+    }
+};
+
+class Professor : public Pessoa{
+    private:
+    std::string titulação;
+    std::string linhaPesquisa;
+    
+    public:
+    
+    std::string getTitulação(){
+        return titulação;
+    }
+    
+    void setTitulação(std::string titulação){
+        this -> titulação = titulação;
+    }
+    
+    std::string LinhaPesquisa(){
+        return linhaPesquisa;
+    }
+    
+    void setLinhaPesquisa(std::string linhaPesquisa){
+        this -> linhaPesquisa = linhaPesquisa;
+    }
+};
+
+class Aluno : public Pessoa{
+    private:
+    std::string turma;
+    
+    public:
+    
+    std::string LinhaTurma(){
+        return turma;
+    }
+    
+    void setTurma(std::string turma){
+        this -> turma = turma;
+    }
+};
+int main()
+{
+    std::string euMudoTodaHora;
+    int euMudoTodaHoraInt;
+    //principal aluno ↓
+    Aluno aluno1;
+    std::cout << "sua turma: ";
+    getline(std::cin, euMudoTodaHora );
+    aluno1.setTurma(euMudoTodaHora);
+    // pessoa ↓
+    std::cout << "seu nome: ";
+    getline(std::cin, euMudoTodaHora );
+    aluno1.setNome(euMudoTodaHora);
+    
+    std::cout << "seu email: ";
+    getline(std::cin, euMudoTodaHora );
+    aluno1.setEmail(euMudoTodaHora);
+    
+    std::cout << "sua matricula: ";
+    std::cin >> euMudoTodaHora;
+    aluno1.setMatricula(euMudoTodaHoraInt);
+    
+    //principal Professor ↓
+    Professor professor1;
+    std::cout << "sua turma: ";
+    getline(std::cin, euMudoTodaHora );
+    professor1.setTitulação(euMudoTodaHora);
+
+    std::cout << "sua turma: ";
+    getline(std::cin, euMudoTodaHora );
+    professor1.setLinhaPesquisa(euMudoTodaHora);
+    
+    //pessoa ↓
+    std::cout << "seu nome: ";
+    getline(std::cin, euMudoTodaHora );
+    professor1.setNome(euMudoTodaHora);
+    
+    std::cout << "seu email: ";
+    getline(std::cin, euMudoTodaHora );
+    professor1.setEmail(euMudoTodaHora);
+    
+    std::cout << "sua matricula: ";
+    std::cin >> euMudoTodaHora;
+    professor1.setMatricula(euMudoTodaHoraInt);
+    
+    return 0;
+}
